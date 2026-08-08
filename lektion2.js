@@ -1,23 +1,27 @@
 
-let maxPointsLektion2 = 3;
-let currentPointsLektion2 = 0;
-const answeredQuestionsLektion2 = new Set();
+const maxPoints = 3; 
+let currentPoints = 0;
+const answeredQuestions = new Set(); 
 
-function updateProgressBarLektion2(questionId) {
-    const progressBar = document.getElementById(`progress-${questionId.replace('l2-question', '')}`);
+function updateProgressBar(questionId) {
+    const progressBar = document.getElementById(`progress-${questionId.replace('question', '')}`);
     
     if (progressBar) {
-        const percentage = (currentPointsLektion2 / maxPointsLektion2) * 100;
+        const percentage = (currentPoints / maxPoints) * 100;
+        
         
         const fillElement = progressBar.querySelector('.progress-fill-small');
         fillElement.style.width = percentage + '%';
-        fillElement.textContent = `${currentPointsLektion2} / ${maxPointsLektion2}`;
+        fillElement.textContent = `${currentPoints} / ${maxPoints}`;
+        
         
         progressBar.classList.remove('hidden');
         progressBar.classList.remove('show');
         
+        
         void progressBar.offsetWidth;
         progressBar.classList.add('show');
+        
         
         setTimeout(() => {
             progressBar.classList.add('hidden');
@@ -26,15 +30,76 @@ function updateProgressBarLektion2(questionId) {
     }
 }
 
-function addPointLektion2(questionId) {
-    if (!answeredQuestionsLektion2.has(questionId)) {
-        answeredQuestionsLektion2.add(questionId);
-        currentPointsLektion2++;
-        updateProgressBarLektion2(questionId);
+function addPoint(questionId) {
+    if (!answeredQuestions.has(questionId)) {
+        answeredQuestions.add(questionId);
+        currentPoints++;
+        updateProgressBar(questionId);
     }
 }
 
-function setupFractionCheckLektion2(buttonId, fieldId, outputId, correctAnswer, questionId) {
+
+function parseNumber(str) {
+    console.log('Input zu parseNumber (raw):', str);
+    console.log('Input zu parseNumber (JSON):', JSON.stringify(str));
+    console.log('Länge:', str.length);
+    
+
+    let cleaned = str.replace(/\s/g, '');  
+
+    console.log('Nach Whitespace-Entfernung:', cleaned);
+    
+    
+    let fracMatch = cleaned.match(/\\frac\{([^}]*)\}\{([^}]*)\}/);
+    if (fracMatch) {
+        const numerator = Number(fracMatch[1]);
+        const denominator = Number(fracMatch[2]);
+        if (!isNaN(numerator) && !isNaN(denominator) && denominator !== 0) {
+            const result = numerator / denominator;
+            console.log(`LaTeX \\frac{}{} erkannt: ${numerator}/${denominator} = ${result}`);
+            return result;
+        }
+    }
+    
+
+    let fracNoMatch = cleaned.match(/\\frac(\d+)(\d+)/);
+    if (fracNoMatch) {
+        const numerator = Number(fracNoMatch[1]);
+        const denominator = Number(fracNoMatch[2]);
+        if (!isNaN(numerator) && !isNaN(denominator) && denominator !== 0) {
+            const result = numerator / denominator;
+            console.log(`LaTeX \\frac (ohne Klammern) erkannt: ${numerator}/${denominator} = ${result}`);
+            return result;
+        }
+    }
+    
+    
+    if (cleaned.includes('/')) {
+        const parts = cleaned.split('/');
+        if (parts.length === 2) {
+            const num = Number(parts[0]);
+            const den = Number(parts[1]);
+            if (!isNaN(num) && !isNaN(den) && den !== 0) {
+                const result = num / den;
+                console.log(`Bruch erkannt: ${num}/${den} = ${result}`);
+                return result;
+            }
+        }
+    }
+    
+    
+    const n = Number(cleaned.replace(',', '.'));
+    if (!isNaN(n) && cleaned !== '') {
+        console.log(`Dezimalzahl erkannt: ${n}`);
+        return n;
+    }
+    
+    console.log('Format konnte nicht geparst werden!');
+    return null;
+}
+
+
+function setupFractionCheck(buttonId, fieldId, outputId, correctAnswer, questionId) {
     const knopf = document.getElementById(buttonId);
     const eingabeFeld = document.getElementById(fieldId);
     const antwortText = document.getElementById(outputId);
@@ -73,7 +138,7 @@ function setupFractionCheckLektion2(buttonId, fieldId, outputId, correctAnswer, 
                 antwortText.classList.remove('warning', 'error');
                 antwortText.classList.add('success');
                 antwortText.style.display = 'flex';
-                addPointLektion2(questionId);
+                addPoint(questionId); // Punkt hinzufügen
             } else {
                 antwortText.textContent = "Das ist falsch.";
                 antwortText.classList.remove('success', 'warning');
@@ -89,36 +154,44 @@ function setupFractionCheckLektion2(buttonId, fieldId, outputId, correctAnswer, 
     });
 }
 
-setupFractionCheckLektion2('pruefen-knopf-aufgabe1', 'math-field-aufgabe1', 'antwort-text-aufgabe1', 32, 'l2-question1');
-setupFractionCheckLektion2('pruefen-knopf-aufgabe2', 'math-field-aufgabe2', 'antwort-text-aufgabe2', 25, 'l2-question2');
-setupFractionCheckLektion2('pruefen-knopf-aufgabe3', 'math-field-aufgabe3', 'antwort-text-aufgabe3', 12.56, 'l2-question3');
 
-function checkAllQuestionsAnsweredLektion2() {
+setupFractionCheck('pruefen-knopf-aufgabe1', 'math-field-aufgabe1', 'antwort-text-aufgabe1', 32, 'question1');
+setupFractionCheck('pruefen-knopf-aufgabe2', 'math-field-aufgabe2', 'antwort-text-aufgabe2', 25, 'question2');
+setupFractionCheck('pruefen-knopf-aufgabe3', 'math-field-aufgabe3', 'antwort-text-aufgabe3', 6.28, 'question3');
+
+function checkAllQuestionsAnswered() {
     const weiterContainer = document.getElementById('weiter-container');
     
-    if (currentPointsLektion2 === maxPointsLektion2) {
+    if (currentPoints === maxPoints) {
         weiterContainer.classList.remove('hidden');
     } else {
         weiterContainer.classList.add('hidden');
     }
 }
 
-function setupWeiterButtonLektion2() {
+function checkAllQuestionsAnswered() {
+    const weiterContainer = document.getElementById('weiter-container');
+    
+    if (currentPoints === maxPoints) {
+        weiterContainer.classList.remove('hidden');
+    } else {
+        weiterContainer.classList.add('hidden');
+    }
+}
+
+function setupWeiterButton() {
     const weiterButton = document.getElementById('weiter-button');
     
     weiterButton.addEventListener('click', function() {
-        window.location.href = 'index.html';
+        window.location.href = 'lektion2.html';
     });
 }
 
-setupWeiterButtonLektion2();
+setupWeiterButton();
 
-// Beim Laden: Button verstecken
-checkAllQuestionsAnsweredLektion2();
 
-// Override der addPointLektion2 Funktion, um den Button zu aktualisieren
-const originalAddPointLektion2 = addPointLektion2;
-addPointLektion2 = function(questionId) {
-    originalAddPointLektion2(questionId);
-    checkAllQuestionsAnsweredLektion2();
+const originalAddPoint = addPoint;
+addPoint = function(questionId) {
+    originalAddPoint(questionId);
+    checkAllQuestionsAnswered();
 };

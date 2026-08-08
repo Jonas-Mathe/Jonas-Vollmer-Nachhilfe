@@ -8,11 +8,13 @@
           <meta name="author" content="Jonas Vollmer">
           <meta http-equiv="X-UA-Compatible" content="ie=edge">
           <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://unpkg.com; script-src 'self' https://unpkg.com; img-src 'self' https: data:; style-src 'self' 'unsafe-inline';">
-         <link rel="stylesheet" href="style.css">
+         <link rel="stylesheet" href="lektion2.css">
 		 <script src="https://unpkg.com/mathlive" defer></script>
    </head>
      <body>
+		<div>
 	    <h1>Lektion 2: Flächeninhalte von Körpern</h1>
+	 </div>
 	    <div>
 	    	<h2>Was sind Flächeninhalte?</h2>
 	    	<p>Der Flächeninhalt ist der Platz, den eine Form einnimmt. Man misst ihn in Quadratmetern (m²), Quadratzentimetern (cm²), etc.</p>
@@ -30,7 +32,7 @@
 	    <div class="mathe-container">
 	    	<h2>Berechne die Fläche:</h2>
 	    	<h2>Ein Rechteck: Länge = 8cm, Breite = 4cm<br>Fläche = ?</h2>
-	    	<math-field id="math-field-aufgabe1" placeholder="Lösung..." virtual-keyboard-mode="onfocus"></math-field>
+	    	<math-field id="math-field-aufgabe1" class="aufgabe" placeholder="Lösung..." virtual-keyboard-mode="onfocus"></math-field>
 	    	<button id="pruefen-knopf-aufgabe1">Prüfen</button>
 	    	<p id="antwort-text-aufgabe1"></p>
 	    	<div class="progress-bar-small hidden" id="progress-1">
@@ -47,10 +49,10 @@
 	    <div>
 	    	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBaKDzVWuY49OjeYl26JNcz1BcfBW6TwyPXA&s" alt="Dreieck mit Grundseite und Höhe" loading="lazy">
 	    </div>
-	    <div class="mathe-container2">
+	    <div class="mathe-container">
 	    	<h2>Berechne die Fläche:</h2>
 	    	<h2>Ein Dreieck: Grundseite = 10cm, Höhe = 5cm<br>Fläche = ?</h2>
-	    	<math-field id="math-field-aufgabe2" placeholder="Lösung..." virtual-keyboard-mode="onfocus"></math-field>
+	    	<math-field id="math-field-aufgabe2" class="aufgabe" placeholder="Lösung..." virtual-keyboard-mode="onfocus"></math-field>
 	    	<button id="pruefen-knopf-aufgabe2">Prüfen</button>
 	    	<p id="antwort-text-aufgabe2"></p>
 	    	<div class="progress-bar-small hidden" id="progress-2">
@@ -58,17 +60,17 @@
 	    	</div>
 	    </div>
 	    <div>
-	    	<h3 class="blue-element">Fläche eines Kreises</h3>
+	    	<h3>Fläche eines Kreises</h3>
 	    	<p>Die Fläche eines Kreises berechnet man mit der Formel:<br>
 	    	<strong>Fläche = π × Radius * 2 oder * Durchmesser </strong><br>
 	    	(π ist etwa 3,14)<br>
 	    	Beispiel: Ein Kreis hat den Radius 3cm.<br>
 	    	Fläche = 3,14 × 3 * 2 = 3,14 × 6 ≈ <strong>18,84cm²</strong></p>
 	    </div>
-	    <div class="mathe-container3">
+	    <div class="mathe-container">
 	    	<h2>Berechne die Fläche:</h2>
-	    	<h2>Ein Kreis: Radius = 2cm<br>Fläche ≈ ? (nutze π = 3,14)</h2>
-	    	<math-field id="math-field-aufgabe3" placeholder="Lösung..." virtual-keyboard-mode="onfocus"></math-field>
+	    	<h2>Ein Kreis: Radius = 1cm<br>Fläche ≈ ? (nutze π = 3,14...)</h2>
+	    	<math-field id="math-field-aufgabe3" class="aufgabe" placeholder="Lösung..." virtual-keyboard-mode="onfocus"></math-field>
 	    	<button id="pruefen-knopf-aufgabe3">Prüfen</button>
 	    	<p id="antwort-text-aufgabe3"></p>
 	    	<div class="progress-bar-small hidden" id="progress-3">
@@ -83,6 +85,5 @@
 	    	</div>
 	    </div>
 	    <script src="lektion2.js" defer></script>
-		<script src="script.js" defer></script>
 </body>
 </html>

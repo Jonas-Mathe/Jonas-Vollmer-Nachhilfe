@@ -59,103 +59,25 @@ background-color: lightgrey;
 width: fit-content;  
 }
 
-.blue-element {
+div > .blue-element {
 background-color: lightblue;
 width: fit-content;  
 }
-
-#das-bild {
-border: none;
-border-radius: 5px;
-object-fit: contain;
-width: 90%;
-max-width: 100%;
-margin-right: auto;
-flex-grow: 1;
-}
-
-#das-bild2 {
-display: flex;
-flex-direction: column;
-max-width: 100%;
-width: fit-content;
-padding: 20px;
-margin: 20px 0px 10px 0px;
-background-color: #ffffff;
-border: 2px none;
-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-border-radius: 6px;
-}
-    
 
 #fettText {
 font-weight: bold;
 color: blue;	
 }
 
-#pruefen-knopf3{
-margin-right: auto;
-padding: 10px;
-cursor: pointer;
-flex-grow: 1;
-object-fit: contain;
-}
-
-
-
-#antwort-text3 {
-    font-weight: bold;
-    margin-right: auto;
-    font-size: 18px;
-    object-fit: contain;
-    flex-grow: 1;
-}
-
-
-#pruefen-knopf {
-margin-right: auto;
-padding: 10px;
-cursor: pointer;
-object-fit: contain;
-flex-grow: 1;
-}
-
-
-
-#antwort-text {
-    font-weight: bold;
-    margin-top: 15px;
-    font-size: 18px;
-    object-fit: contain;
-    flex-grow: 1;
-}
-
 button {
-    padding: 10px 20px;
+    padding: 0px 10px 0px 20px;
     font-size: 16px;
     background-color: #007bff;
     color: white;
     border: 2px none;
     border-radius: 4px;
     cursor: pointer;
-}
-
-#pruefen-knopf2 {
-object-fit: contain;
-margin-right: auto;
-padding: 10px;
-cursor: pointer;
-flex-grow: 1;
-}
-
-
-
-#antwort-text2 {
-    font-weight: bold;
-    margin-right: auto;
-    font-size: 18px;
-    flex-grow: 1;
-    object-fit: contain;
+    
 }
 
 button:hover {
@@ -166,148 +88,15 @@ button:hover {
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    padding: 20px;
     flex-direction: column;
     margin: 0;                 
     display: flex;          ;               
     max-width: 100%;
     width: 100%;
+    gap: 40px;
 }
 
-
-
-#halt2 {
-padding: 20px;
-display: flex;
-gap: 20px;
-width: fit-content;
-border:2px none;
-border-radius: 6px;
-background-color: #ffffff;
-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-margin: 20px 5px 10px 0px;
-max-width: 100%;
-}
-
-#halt1 {
-padding: 20px;
-border: 2px none;
-border-radius: 6px;
-background-color: #ffffff;
-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-margin: 20px 5px 10px 0px;
-width: fit-content;
-max-width: 100%;
-display: flex;
-gap: 20px;
-}
-
-#digga {
-border: none;
-object-fit: contain;
-width: 90%;
-margin-right: auto;
-flex-grow: 1;
-}
-
-#munuk {
-display: flex;
-gap: 20px;
-flex-direction: column;
-padding: 20px;
-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-width: fit-content;
-max-width: 100%;
-border: none;
-background-color: #ffffff;
-margin: 20px 5px 10px 0px;
-}
-
-#like {
-object-fit: contain;
-margin-right: auto;
-flex-grow: 1;
-border: none;
-
-
-}
-
-#einfach {
-border: solid;
-border-radius: 5px;
-display: flex;
-gap: 20px;
-flex-direction: column;
-padding: 20px;
-margin: 20px 20px 20px 0px;
-align-items: flex-start;
-}
-
-#unglaublich {
-padding: 20px;
-display: flex;
-gap: 20px;
-width: fit-content;
-border: 2px none;
-border-radius: 6px;
-background-color: #ffffff;
-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-margin: 20px 5px 10px 0px;
-flex-direction: column;
-}
-
-#am {
-font-family: Arial, sans-serif;    
-}
-
-h1 {
-background-color: lightblue;
-padding: 10px;
-margin: 20px 5px 10px 0px;
-border: solid;
-border-radius: 5px;
-width: fit-content;
-}
-
-#pruefen-knopf4 {
-margin-right: auto;
-padding: 10px;
-cursor: pointer;
-flex-grow: 1;
-object-fit: contain;
-
-}
-
-#antwort-text4 {
-    font-weight: bold;
-    margin-right: auto;
-    font-size: 18px;
-    flex-grow: 1;
-    object-fit: contain;
-}
-
-#unglaublich2 {
-display: flex;
-gap: 20px;
-flex-direction: column;
-padding: 20px;
-width: fit-content;
-border: 2px none;
-border-radius: 6px;
-background-color: #ffffff;
-margin: 20px 5px 10px 0px;
-align-items: flex-start;    
-}
-
-#pruefen-knopf5 {
-margin-right: auto;
-padding: 10px;
-cursor: pointer;
-object-fit: contain;
-flex-grow: 1;
-}
-
-.mathe-container {
+div.mathe-container {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
@@ -318,15 +107,8 @@ flex-grow: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: fit-content;
-}
-
-#antwort-text5 {
-    font-weight: bold;
-    object-fit: contain;
-    margin-right: auto;
-    font-size: 18px;
-    flex-grow: 1;
+    width: 50%;
+    max-width: 100%;
 }
 
 #warumdas {
@@ -402,50 +184,10 @@ p.warning {
     font-weight: bold;
 }
 
-#math-field-rechnung {
-cursor: text;
-font: bold 16px Arial, sans-serif;
-object-fit: contain;
-margin-right: auto;
-flex-grow: 1;
-}
-
-#math-field-rechnung2 {
-cursor: text;
-font: bold 16px Arial, sans-serif;
-margin-right: auto;
-object-fit: contain;
-flex-grow: 1;
-}
-
-#math-field-rechnung3 {
-cursor: text;
-font: bold 16px Arial, sans-serif;
-margin-right: auto;
-object-fit: contain;
-flex-grow: 1;
-}
-
-#math-field-rechnung4 {
-cursor: text;
-font: bold 16px Arial, sans-serif;
-margin-right: auto;
-object-fit: contain;
-flex-grow: 1;
-}
-
-#math-field-rechnung5 {
-cursor: text;
-font: bold 16px Arial, sans-serif;
-object-fit: contain;
-margin-right: auto;
-flex-grow: 1;
-}
-
 div[data-keyboard], 
 .ML__keyboard,
 .mathlive-keyboard-container {
-  width: 100vw !important;
+  width: 100% !important;
   max-width: 100% !important;
   
   left: 0 !important;
@@ -475,5 +217,40 @@ html, body {
 img, video {
     max-width: 100%;
     object-fit: contain;
+}
+
+h2 {
+object-fit: contain;
+}
+
+h3 {
+object-fit: contain;
+}
+
+.rechnung {
+margin-right: auto;
+object-fit: contain;
+max-width: 90%;
+width: 60%;
+flex-grow: 1;
+padding: 10px;
+}
+
+.knopf {
+object-fit: contain;
+flex-grow: 1;
+max-width: 90%;
+width: 30%;
+margin-right: auto;
+padding: 10px;
+}
+
+.text {
+object-fit: contain;
+flex-grow: 1;
+max-width: 90%;
+width: 60%;
+margin-right: auto;
+padding: 10px;
 }
 
