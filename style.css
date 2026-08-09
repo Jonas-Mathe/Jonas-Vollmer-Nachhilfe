@@ -59,15 +59,11 @@ background-color: lightgrey;
 width: fit-content;  
 }
 
-div > .blue-element {
+div > .blue_element {
 background-color: lightblue;
 width: fit-content;  
-}
+}	
 
-#fettText {
-font-weight: bold;
-color: blue;	
-}
 
 button {
     padding: 0px 10px 0px 20px;
@@ -96,45 +92,72 @@ body {
     gap: 40px;
 }
 
-div.mathe-container {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    max-width: 100%;
-    border: 6px none;
-    margin: 20px 0px 10px 0px;
-    display: flex;
+body > * {
+    flex-grow: 1;
+    object-fit: contain;
+}
+
+div > * {
+    flex-grow: 1;
+    margin-right: auto;
+    object-fit: contain;
+}
+
+div {
+display: flex;
+flex-direction: column;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+background-color: white;
+padding: 20px;
+gap: 50px;
+}
+
+#überschrift {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
     flex-direction: column;
-    gap: 20px;
-    width: 50%;
-    max-width: 100%;
+    flex-grow: 1;
 }
 
-#warumdas {
-display: flex;
-gap: 20px;
-flex-direction: column;
-padding: 20px;
-width: fit-content;
-border: 2px none;
-border-radius: 6px;
-background-color: #ffffff;
-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-margin-right: auto;
+#ol_liste {
+font-size: 18px;
+
 }
 
-#flächeninhalt {
-display: flex;
-gap: 20px;
-flex-direction: column;
-width: fit-content;
-border: 2px none;
-border-radius: 6px;
-background-color: #ffffff;
-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-margin: 20px 5px 10px 0px;
-padding: 20px;
+#jonas {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#blue_element {
+    background-color: lightblue;
+    width: fit-content;  
+}
+
+#was {
+    background-color: lightgrey;
+    width: fit-content;  
+}
+
+#verena {
+    max-width: 90%;
+    width: 60%;
+    padding: 10px;
+    border: 2px  none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#kreis_bild {
+    max-width: 90%;
+    width: 60%;
+}
+
+#johann {
+    max-width: 90%;
+    width: 60%;
+    padding: 10px;
 }
 
 .weiter-container {
@@ -252,5 +275,15 @@ max-width: 90%;
 width: 60%;
 margin-right: auto;
 padding: 10px;
+}
+
+.mathe-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 100%;
+    margin-right: auto;
+    padding: 20px;
+    gap: 20px;
 }
 

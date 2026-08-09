@@ -1,27 +1,38 @@
 h1 {
- display: flex;
- gap: 10px;
- flex-direction: column;
  padding: 20px;
  margin: 20px 5px 20px 0px;
- align-items: flex-start;
- width: fit-content; 
- border: solid 2px #0000001a;
+ align-items: flex-start; 
+ border: none 2px;
  border-radius: 5px;
  background-color: #add8e6;
  box-shadow: 0 2px 4px #0000001a;
  font: bold 24px Arial, sans-serif;
 }
 
+div > * {
+object-fit: contain;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    object-fit: contain;
+    margin-right: auto;
+    width: 30%;
+    max-width: 80%;
+}
+
+
+
 p {
-display: flex;
-gap: 10px;
-flex-direction: column;
 padding: 20px;
-margin: 20px 5px 20px 0px;
-align-items: flex-start;
-width: fit-content;
-border: solid 2px rgb(0, 0, 0);
+border: none 2px;
 border-radius: 5px;
 background-color: #ffffff;
 box-shadow: 0 2px 4px #0000001a;
@@ -92,7 +103,7 @@ h2 {
  margin: 20px 5px 20px 0px;
  align-items: flex-start;
  width: fit-content;
- border: solid 2px #000000;
+ border: none 2px;
  border-radius: 5px;
  background-color: #ffffff;
  box-shadow: 0 2px 4px #0000001a;
@@ -100,18 +111,14 @@ h2 {
 }
 
 h3 {
- display: flex;
- gap: 10px;
- flex-direction: column;
  padding: 20px;
- margin: 20px 5px 20px 0px;
- align-items: flex-start;
  width: fit-content;
- border: solid 2px #000000;
  border-radius: 5px;
  background-color: #ffffff;
  box-shadow: 0 2px 4px #0000001a;
  font: bold 20px Arial, sans-serif;
+ margin-right: auto;
+ max-width: 100%;
 }
 
 .weiter-container {
@@ -145,49 +152,34 @@ h3 {
     transform: scale(0.98);
 }
 
-#mathe-container {
+.mathe-container {
  display: flex;
  flex-direction: column;
- align-items: center;
  gap: 20px;
  margin: 40px 0px 40px 0px;
  padding: 20px;
- border: none;
+ border: none 2px;
  border-radius: 5px;
  box-shadow: 0 2px 4px #0000001a;
+ width: 30%;
+ max-width: 100%;
 }
 
-#math-field-aufgabe1 {
-  width: fit-content;
-  height: fit-content;
-  font-size: 18px;
-  padding: 10px;
-  border: solid 2px #0000001a;
-  border-radius: 5px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px #0000001a;
-  font: bold 18px Arial, sans-serif;
-  text-align: center;
-  cursor: text;
+button:hover {
+    background-color: #0056b3;
 }
 
-#pruefen-knopf-aufgabe1 {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+.aufgabe {
+object-fit: contain;
+flex-grow: 1;
+border-radius: 5px;
+border: none 2px;
+background-color: #ffffff;
+margin-right: auto;
 }
 
-#antwort-text-aufgabe1 {
-  cursor: pointer;
-  font: bold 16px Arial, sans-serif;
-  color: #333333;
-  text-align: center;
+strong {
+ font-weight: bold;
+ color: #0000ff;
 }
-
 
