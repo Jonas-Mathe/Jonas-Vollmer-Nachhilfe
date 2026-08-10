@@ -84,23 +84,23 @@ button:hover {
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    flex-direction: column;
-    margin: 0;                 
-    display: flex;          ;               
+    margin: 0;                  
     max-width: 100%;
     width: 100%;
     gap: 40px;
+    min-width: 100%;
 }
 
 body > * {
     flex-grow: 1;
-    object-fit: contain;
+    min-width: 50%;
 }
 
 div > * {
     flex-grow: 1;
     margin-right: auto;
     object-fit: contain;
+    min-width: 50%;
 }
 
 div {
@@ -110,6 +110,7 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 background-color: white;
 padding: 20px;
 gap: 50px;
+object-fit: contain;
 }
 
 #überschrift {
@@ -151,7 +152,7 @@ font-size: 18px;
 
 #kreis_bild {
     max-width: 90%;
-    width: 60%;
+    width: 40%;
 }
 
 #johann {
@@ -159,6 +160,14 @@ font-size: 18px;
     width: 60%;
     padding: 10px;
 }
+
+#beschreibung {
+    max-width: 90%;
+    width: 60%;
+    padding: 10px;
+}
+
+
 
 .weiter-container {
     margin-top: 40px;
@@ -285,5 +294,6 @@ padding: 10px;
     margin-right: auto;
     padding: 20px;
     gap: 20px;
+    min-width: 90%;
 }
 
