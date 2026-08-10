@@ -1,11 +1,11 @@
 
 .progress-bar-small {
     width: 100%;
-    height: 25px;
+    height: 1.5rem;
     background-color: #e0e0e0;
-    border-radius: 12px;
+    border-radius: 0.75rem;
     overflow: hidden;
-    margin-top: 10px;
+    margin-top: 0.6rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +21,7 @@
     justify-content: center;
     color: white;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .progress-bar-small.hidden {
@@ -66,14 +66,13 @@ width: fit-content;
 
 
 button {
-    padding: 0px 10px 0px 20px;
-    font-size: 16px;
+    padding: 0.6rem 1.25rem 0.6rem 1.25rem;
+    font-size: 1rem;
     background-color: #007bff;
     color: white;
     border: 2px none;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     cursor: pointer;
-    
 }
 
 button:hover {
@@ -102,11 +101,11 @@ body > div {
 div {
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: white;
-    padding: 20px;
-    gap: 30px;
     width: 100%;
+    gap: 2rem;
+    padding: 1.5rem;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 img, math-field {
@@ -162,8 +161,8 @@ font-size: 18px;
 #mathe5_bild,
 #nerd,
 img {
-    max-width: 100%;
-    width: 100%;
+    max-width: 85%;
+    width: 60%;
     height: auto;
 }
 
@@ -180,8 +179,8 @@ img {
 
 
 .weiter-container {
-    margin-top: 40px;
-    padding: 20px;
+    margin-top: 2rem;
+    padding: 1.5rem;
     text-align: center;
 }
 
@@ -190,8 +189,8 @@ img {
 }
 
 .weiter-button {
-    padding: 15px 40px;
-    font-size: 18px;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
     background-color: #28a745;
     color: white;
     border: none;
@@ -250,6 +249,11 @@ div[data-keyboard],
   padding: 0 !important;
 }
 
+html {
+    font-size: 1.5vw;
+    line-height: 1.5;
+}
+
 html, body {
     width: 100%;
     margin: 0;
@@ -262,16 +266,16 @@ body {
     color: #111;
     line-height: 1.5;
     margin: 0;
-    padding: 20px;
+    padding: 1.5rem;
 }
 
 body > div {
-    width: min(100%, 1100px);
-    margin: 0 auto 20px;
+    width: 100%;
+    margin: 0 auto 1.5rem;
 }
 
 img, video, math-field {
-    max-width: 100%;
+    max-width: 60%;
     height: auto;
     display: block;
 }
@@ -281,15 +285,15 @@ h1, h2, h3, p, li {
 }
 
 h1 {
-    font-size: clamp(2rem, 3vw, 2.4rem);
+    font-size: 2.5rem;
 }
 
 h2 {
-    font-size: clamp(1.5rem, 2.2vw, 2rem);
+    font-size: 1.875rem;
 }
 
 h3 {
-    font-size: clamp(1.25rem, 1.8vw, 1.6rem);
+    font-size: 1.5625rem;
 }
 
 .rechnung,
@@ -307,21 +311,21 @@ h3 {
 
 .rechnung,
 .text {
-    padding: 10px;
+    padding: 0.75rem;
 }
 
 .knopf {
     width: 100%;
     max-width: 100%;
-    padding: 12px;
+    padding: 0.75rem;
 }
 
 .mathe-container {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    padding: 20px;
-    gap: 20px;
+    padding: 1.5rem;
+    gap: 1.5rem;
 }
 
 button,
@@ -329,35 +333,5 @@ button,
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-}
-
-@media (max-width: 768px) {
-    body {
-        padding: 12px;
-    }
-
-    body > div {
-        margin-bottom: 16px;
-    }
-
-    div {
-        padding: 16px;
-        gap: 20px;
-    }
-
-    .progress-fill-small {
-        font-size: 0.8rem;
-    }
-
-    button,
-    .weiter-button {
-        padding: 14px 18px;
-        font-size: 1rem;
-    }
-
-    .mathe-container {
-        padding: 16px;
-        gap: 16px;
-    }
 }
 
