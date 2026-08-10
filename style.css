@@ -81,36 +81,42 @@ button:hover {
 }
 
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    margin: 0;                  
-    max-width: 100%;
-    width: 100%;
-    gap: 40px;
-    min-width: 100%;
+    margin: 0;
+    padding: 20px;
+    color: #111;
+    line-height: 1.5;
 }
 
-body > * {
-    flex-grow: 1;
-    min-width: 50%;
-}
-
-div > * {
-    flex-grow: 1;
-    margin-right: auto;
-    object-fit: contain;
-    min-width: 50%;
+body > div {
+    width: min(100%, 1100px);
+    margin: 0 auto 20px;
 }
 
 div {
-display: flex;
-flex-direction: column;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-background-color: white;
-padding: 20px;
-gap: 50px;
-object-fit: contain;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 20px;
+    gap: 30px;
+    width: 100%;
+}
+
+img, math-field {
+    max-width: 100%;
+    height: auto;
+}
+
+button, .weiter-button {
+    max-width: 100%;
+    width: auto;
 }
 
 #überschrift {
@@ -142,29 +148,33 @@ font-size: 18px;
     width: fit-content;  
 }
 
-#verena {
-    max-width: 90%;
-    width: 60%;
-    padding: 10px;
-    border: 2px  none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#kreis_bild {
-    max-width: 90%;
-    width: 40%;
-}
-
-#johann {
-    max-width: 90%;
-    width: 60%;
-    padding: 10px;
-}
-
+#verena,
+#johann,
 #beschreibung {
-    max-width: 90%;
-    width: 60%;
+    max-width: 100%;
+    width: 100%;
     padding: 10px;
+}
+
+#kreis_bild,
+#addition_subtraktion_bilder,
+#gleichnahmig_bild,
+#mathe5_bild,
+#nerd,
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+#blue_element,
+#was,
+#jonas,
+#beschreibung,
+#überschrift,
+#ol_liste,
+#fettText {
+    width: 100%;
 }
 
 
@@ -246,54 +256,108 @@ html, body {
     padding: 0;
 }
 
-img, video {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #111;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+}
+
+body > div {
+    width: min(100%, 1100px);
+    margin: 0 auto 20px;
+}
+
+img, video, math-field {
     max-width: 100%;
-    object-fit: contain;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3, p, li {
+    margin: 0;
+}
+
+h1 {
+    font-size: clamp(2rem, 3vw, 2.4rem);
 }
 
 h2 {
-object-fit: contain;
+    font-size: clamp(1.5rem, 2.2vw, 2rem);
 }
 
 h3 {
-object-fit: contain;
+    font-size: clamp(1.25rem, 1.8vw, 1.6rem);
 }
 
-.rechnung {
-margin-right: auto;
-object-fit: contain;
-max-width: 90%;
-width: 60%;
-flex-grow: 1;
-padding: 10px;
+.rechnung,
+.knopf,
+.text,
+.mathe-container,
+#verena,
+#johann,
+#beschreibung {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-right: 0;
+}
+
+.rechnung,
+.text {
+    padding: 10px;
 }
 
 .knopf {
-object-fit: contain;
-flex-grow: 1;
-max-width: 90%;
-width: 30%;
-margin-right: auto;
-padding: 10px;
-}
-
-.text {
-object-fit: contain;
-flex-grow: 1;
-max-width: 90%;
-width: 60%;
-margin-right: auto;
-padding: 10px;
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
 }
 
 .mathe-container {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
+    width: 100%;
     max-width: 100%;
-    margin-right: auto;
+    margin: 0 auto;
     padding: 20px;
     gap: 20px;
-    min-width: 90%;
+}
+
+button,
+.weiter-button {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 12px;
+    }
+
+    body > div {
+        margin-bottom: 16px;
+    }
+
+    div {
+        padding: 16px;
+        gap: 20px;
+    }
+
+    .progress-fill-small {
+        font-size: 0.8rem;
+    }
+
+    button,
+    .weiter-button {
+        padding: 14px 18px;
+        font-size: 1rem;
+    }
+
+    .mathe-container {
+        padding: 16px;
+        gap: 16px;
+    }
 }
 
