@@ -306,7 +306,7 @@ h3 {
     width: 100%;
     max-width: 100%;
     min-width: 0;
-    margin-right: 0;
+margin-right: auto;
 }
 
 .rechnung,
@@ -333,5 +333,10 @@ button,
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+}
+
+#johann {
+margin-right: auto;
+font: 
 }
 
