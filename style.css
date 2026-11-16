@@ -1,3 +1,7 @@
+:root {
+  --keyboard-zindex: 9999;
+}
+
 
 .progress-bar-small {
     width: 100%;
