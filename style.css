@@ -1,6 +1,5 @@
-:root {
-  --keyboard-zindex: 9999;
-}
+
+
 
 
 .progress-bar-small {
@@ -108,7 +107,6 @@ div {
     width: 100%;
     gap: 2rem;
     padding: 1.5rem;
-    background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
