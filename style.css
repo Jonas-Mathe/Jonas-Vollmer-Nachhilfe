@@ -101,12 +101,13 @@ body > div {
     margin: 0 auto 20px;
 }
 
-div {
+div:not(.mathe-container) {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 2rem;
     padding: 1.5rem;
+    background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -315,6 +316,5 @@ button,
 
 #johann {
 margin-right: auto;
-font: 
 }
 
